@@ -1,16 +1,16 @@
 all: WissenschaftlicheArbeit.pdf Deckblatt/Deckblatt.pdf
 
 Deckblatt/Deckblatt.pdf: Deckblatt/Deckblatt.tex
-	pdflatex -output-directory=Deckblatt Deckblatt/Deckblatt.tex
+	miktex-pdflatex -output-directory=Deckblatt Deckblatt/Deckblatt.tex
 
 WissenschaftlicheArbeit.pdf: WissenschaftlicheArbeit.tex \
 							 Tex/*.tex \
 							 Bib.bib \
 							 Ressourcen/*.*
-	pdflatex WissenschaftlicheArbeit.tex
+	miktex-pdflatex WissenschaftlicheArbeit.tex
 	biber WissenschaftlicheArbeit
 	makeglossaries WissenschaftlicheArbeit
-	pdflatex WissenschaftlicheArbeit.tex
+	miktex-pdflatex WissenschaftlicheArbeit.tex
 
 clean:
 	rm -rf Ressourcen/*.aux Ressourcen/*.bbl Ressourcen/*.log Ressourcen/*.fls Ressourcen/*.blg

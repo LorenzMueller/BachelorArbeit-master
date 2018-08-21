@@ -84,9 +84,11 @@
 ]{subsection}
 \renewcommand*{\subsectionformat}{\makebox[13mm][l]{\thesubsection.\enskip}} % Feste Breite für Unterabschnittsnummer und immer Punkt danach
 
+\usepackage{csquotes}
 
-\usepackage[backend=biber]{biblatex}
-\bibliography{Bib}
+\usepackage[backend=biber, style=apa]{biblatex}
+\addbibresource{Bib.bib}
+
 \usepackage{float}
 % Listen:
 \usepackage{enumitem}
